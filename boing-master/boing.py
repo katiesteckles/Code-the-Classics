@@ -21,7 +21,7 @@ if pgzero_version < [1,2]:
 # Set up constants
 WIDTH = 800
 HEIGHT = 480
-TITLE = "Boing!"
+TITLE = "Paulng!"
 
 HALF_WIDTH = WIDTH // 2
 HALF_HEIGHT = HEIGHT // 2
@@ -228,7 +228,7 @@ class Bat(Actor):
             else:
                 frame = 1
 
-        self.image = "bat" + str(self.player) + str(frame)
+        self.image = "pbat" + str(self.player) + str(frame)
 
     def ai(self):
         # Returns a number indicating how the computer player will move - e.g. 4 means it will move 4 pixels down
@@ -447,7 +447,7 @@ def draw():
     game.draw()
 
     if state == State.MENU:
-        menu_image = "menu" + str(num_players - 1)
+        menu_image = "pmenu" + str(num_players - 1)
         screen.blit(menu_image, (0,0))
 
     elif state == State.GAME_OVER:
